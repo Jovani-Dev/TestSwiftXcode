@@ -1,0 +1,31 @@
+import SwiftUI
+
+struct ContentView: View {
+    @State private var message = "Bienvenue dans mon application !"
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text(message)
+                .font(.title)
+                .padding()
+            
+            Button(action: {
+                message = "Bouton pressé !"
+            }) {
+                Text("Appuyer ici")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+        }
+        .padding()
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
